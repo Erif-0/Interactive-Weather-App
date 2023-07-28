@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=alata:400" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather App</title>
+    
+</head>
+
+<body>
+    
+    <div class="container">
+        
+        <div class="search-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <input id="myInput" type="text" placeholder="Location" name="cityName" >
+            <button id="myBtn" class="fa-solid fa-magnifying-glass"></button>
+        </div>
+
+        <div class="not-found">
+            <img src="https://img.freepik.com/free-icon/night_318-833977.jpg?w=2000" alt="">
+            <p>Invalid Query :(</p>
+        </div>
+
+        <div class="weather-card">
+            <img src="">
+            <p class="temperature"></p>
+            <p class="description"></p>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Humidity</p>
+                </div>
+            </div>
+
+            <div class="windy">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Windy</p>
+                </div>
+            </div>
+        </div>
+       
+    
+    </div>
+    <div id="blur"></div>
+    <div id="blob"></div>
+    <canvas id="canvas"></canvas>
+    <script src="app.js"></script>
+    <script>
+        var input = document.getElementById("myInput");
+        input.addEventListener("keypress", function(event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("myBtn").click();
+          }
+        });
+        </script>
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</body>
+
+</html>
