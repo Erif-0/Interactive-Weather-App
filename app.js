@@ -23,7 +23,7 @@ window.onpointermove = event => {
 
 search.addEventListener('click', () => {
 
-    const APIKey = '886705b4c1182eb1c69f28eb8c520e2 0';
+    const APIKey = '886705b4c1182eb1c69f28eb8c520e20';
     const city = document.querySelector('.search-box input').value;
  
     if (city === '')
